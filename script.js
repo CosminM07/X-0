@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function(){
-  again();
+  playGame();
 
   const playerWin = document.getElementById('playerWin');
   playerWin.style.visibility = "hidden";
@@ -58,19 +58,19 @@ function checkWinner() {
 }
 
 
-function again() {
+function playGame() {
   
   let move = 1;
   let playing = true;
   
-  // variabila cells va contine toate cellsle (td) din tabelul cu id-ul #tabel
+  // variabila cells va contine toate celulele (td) din tabelul cu id-ul #tabel
   let cells = document.querySelectorAll('#table tr td');
 
-  //pentru fiecare cell din tabel
+  //pentru fiecare celula din tabel
   for(let i=0; i<cells.length; i++){
       
       let cell = cells[i];
-      // specificam comportamentul cellsi atunci cand este apasata
+      // specificam comportamentul celulele atunci cand este apasata
       cell.onclick = function(e){
          if(cell.innerHTML == '' && playing){
            
@@ -117,10 +117,9 @@ function again() {
  playerWin.style.visibility = "hidden";
  playerWin.innerHTML="The winner is player:"
  
- again();
+ playGame();
 
 
 }
-
 
 
